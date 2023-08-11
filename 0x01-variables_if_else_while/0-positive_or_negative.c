@@ -3,7 +3,8 @@
 int main () {
 
    /* variable definition */
-   int n = rand();
+   int n;
+   n = rand() - RAND_MAX;
  
    /* check the boolean condition */
    if( n > 0 ) {
