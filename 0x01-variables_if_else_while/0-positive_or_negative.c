@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
  
-int main () {
+int main (void) {
 
    /* variable definition */
    int n;
-   n = rand() - RAND_MAX;
+   n = rand() - RAND_MAX/2;
  
    /* check the boolean condition */
    if( n > 0 ) {
