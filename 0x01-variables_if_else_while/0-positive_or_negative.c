@@ -1,24 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
- 
-int main (void) {
+/**
+ *Main - Starting point
+ *Return - Always 0 (success)
+ */
 
-   /* variable definition */
-   int n;
-   n = rand() - RAND_MAX/2;
- 
-   /* check the boolean condition */
-   if( n > 0 ) {
-      /* if condition is true then print the following */
-      printf("%d\n : is positive\n" , n);
-   } else if (n == 0) {
-      /* if condition is true then print the following */
-      printf("%d\n : is zero\n" , n);
-   } else (n < 0) {
-      /* if condition is true then print the following */
-      printf("%d\n : is negative\n" , n);
-   }
- 
-   return 0;
+int main(void)
+{
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if( n > 0 ) 
+      		printf("%d\n : is positive\n", n);
+else if (n == 0) 
+      		printf("%d\n : is zero\n", n);
+   	else 
+      	printf("%d\n : is negative\n",  n);
+	return (0);
 }
+
