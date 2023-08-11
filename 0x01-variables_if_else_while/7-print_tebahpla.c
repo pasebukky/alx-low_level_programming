@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print lowercase alphabets in reverse followed by a new line
+ * main - print lowercase alphabets in reverse
  * 
  * Return: Always 0 (Success)
  */
@@ -16,4 +16,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
