@@ -1,9 +1,9 @@
 #include "main.h"
 
-/** 
- * main - print _putchar
+/**
+ * main - prints _putchar
  * by olubukunola pase
- * return:0
+ * return:0 (success)
  */
 
 int main(void)
