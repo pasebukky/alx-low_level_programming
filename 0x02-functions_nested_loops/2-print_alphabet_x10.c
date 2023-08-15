@@ -7,19 +7,20 @@
 
 void print_alphabet_x10(void)
 {
-	char alphabet
-	int multiples;
+	char alphabet;
+	int multiple;
 
-	multiples = 0;
+	multiple = 0;
 
-	while (multiples < 10)
+	while (multiple < 10)
 	{
-        	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
-			{
-				_putchar(alphabet);
-			}
+		alphabet = 'a';
+		while (alphabet <= 'z')
+		{
+			_putchar(alphabet);
+			alphabet++;
+		}
 		_putchar('\n');
-		
-		multiples++;
+		multiple++;
 	}
 }
