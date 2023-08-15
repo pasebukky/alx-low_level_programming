@@ -9,17 +9,17 @@
 void print_alphabet_x10(void)
 {
 char alphabet;
+int multiples;
 
 while (alphabet = 'a'; alphabet <= 'z'; alphabet++)
-
-    int multiples = 0
-
+{
+    multiples = 0
     while (multiples < 10)
-
+    {
          _putchar(alphabet);
-
+    }
     _putchar('\n');
-
+}
 return (0);
 }
 
