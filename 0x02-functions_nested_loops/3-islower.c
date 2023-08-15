@@ -2,11 +2,10 @@
 
 /**
  * _islower - Check for lowercase characters
- * c: The character to be checked
- *
- * Return: 1 if the character is lowercase, 0 otherwise
+ * 
+ * Return: 1 if the character is lowercase and 0 otherwise
  */
-int _islower(int c)
+int _islower(int c) /*@c: The character to be checked/
 {
     if (c >= 'a' && c <= 'z')
     {
