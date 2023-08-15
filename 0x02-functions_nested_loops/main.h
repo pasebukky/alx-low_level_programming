@@ -22,7 +22,8 @@ int print_sign(int n);
 /* Prototype for _abs function */
 int _abs(int);
 
-
+/* Prototype for print_last_digit function */
+int print_last_digit(int);
 
 
 
