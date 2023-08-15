@@ -3,7 +3,6 @@
 /**
  * print_alphabet_x10 - prints lowercase alphabets 10 times
  * by olubukunola pase
- * Return: 0 (success)
  */
 
 void print_alphabet_x10(void)
@@ -16,11 +15,10 @@ void print_alphabet_x10(void)
     {
         for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
         {
-            _putchar(alphabet);
+            putchar(alphabet);
         }
-        _putchar('\n');
+        putchar('\n');
 
         multiples++;
     }
-    return (0);
 }
