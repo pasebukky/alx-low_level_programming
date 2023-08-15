@@ -8,7 +8,7 @@ int _putchar(char c);
 void print_alphabet(void);
 
 /* Prototype for print_alphabet_x10 function */
-void print_alphabet_x10(void)
+void print_alphabet_x10(void);
 
 
 #endif /* main_h */
