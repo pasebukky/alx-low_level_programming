@@ -31,7 +31,8 @@ void jack_bauer(void);
 /* Prototype for times_table function */
 void times_table(void);
 
-
+/* Prototype for add function */
+int add(int, int);
 
 
 
