@@ -1,15 +1,14 @@
 #include "main.h"
 
 /** 
- * main - is the entry poin 
- * @_putchar: is used to print the text
- * return - 0 (success)
+ * main - print _putchar
+ * by olubukunola pase
+ * return:0
  */
 
 int main(void)
 
 {
- /* Calling _putchar to print a script*/
 _putchar('_');
 _putchar('p');
 _putchar('u');
