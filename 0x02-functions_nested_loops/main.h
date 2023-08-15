@@ -1,8 +1,8 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef main_h
+#define main_h
 
 /* Prototype for _putchar function */
 int _putchar(char c);
 
-#endif /* MAIN_H */
+#endif /* main_h */
 
