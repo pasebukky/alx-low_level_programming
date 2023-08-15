@@ -1,6 +1,6 @@
 #include "main.h"
 
-/* Main is the entry point that prints _putchar */
+/** Main is the entry point that prints _putchar */
 int main(void)
 
 {
