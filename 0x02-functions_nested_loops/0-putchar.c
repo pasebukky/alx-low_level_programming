@@ -1,9 +1,9 @@
 #include "main.h"
 
+/* Main - prints _putchar
+*/
+
 int main(void)
-/* Main is the entry point
- * that prints _putchar
- */
 {
  /* Calling _putchar to print a script*/
 _putchar('_');
