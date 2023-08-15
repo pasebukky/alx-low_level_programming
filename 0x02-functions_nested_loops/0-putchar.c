@@ -1,6 +1,11 @@
 #include "main.h"
 
-/** Main is the entry point that prints _putchar */
+/** 
+ * main - is the entry poin 
+ * @_putchar: is used to print the text
+ * return - 0 (success)
+ */
+
 int main(void)
 
 {
