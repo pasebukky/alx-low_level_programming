@@ -2,6 +2,7 @@
 
 /* Main is the entry point that prints _putchar */
 int main(void)
+
 {
  /* Calling _putchar to print a script*/
 _putchar('_');
