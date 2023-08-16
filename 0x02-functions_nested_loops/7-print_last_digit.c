@@ -3,6 +3,7 @@
 /**
  * print_last_digit - Prints and returns the last digit of a number
  * @r: The number the last digit is gotten from
+ * Last digit of INT_MIN is 8
  *
  * Return: The value of the last digit
  */
@@ -12,7 +13,7 @@ int print_last_digit(int r)
 
 	if (r == INT_MIN)
 	{
-		_putchar('0' + 8); /* Last digit of INT_MIN is 8*/
+		_putchar('0' + 8);
 		return 8;
 	}
 
