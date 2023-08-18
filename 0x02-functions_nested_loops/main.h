@@ -37,5 +37,6 @@ int add(int, int);
 /* Prototype for print_to_98 function */
 void print_to_98(int n);
 
+void print_times_table(int n);
 #endif /* main_h */
 
