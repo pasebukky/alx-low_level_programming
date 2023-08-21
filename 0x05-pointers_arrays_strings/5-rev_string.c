@@ -18,6 +18,6 @@ while (begin < finish)
         temp = s[begin];
         s[begin] = s[finish];
         s[finish] = temp;
-begin++;
-finish--;
+	begin++;
+	finish--;
 }
