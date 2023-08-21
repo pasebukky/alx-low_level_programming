@@ -26,8 +26,9 @@ int main(void)
 
     char password[LENTH_OF_PASSWORD + 1];
     const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    int i;  // Declare 'i' here
 
-    for (int i = 0; i < LENTH_OF_PASSWORD; i++)
+    for (i = 0; i < LENTH_OF_PASSWORD; i++)  // Initialize 'i' separately
     {
         int random_index = rand() % (sizeof(charset) - 1);
         password[i] = charset[random_index];
@@ -35,7 +36,7 @@ int main(void)
 
     password[LENTH_OF_PASSWORD] = '\0';
 
-    for (int i = 0; i < LENTH_OF_PASSWORD; i++)
+    for (i = 0; i < LENTH_OF_PASSWORD; i++)  // Reuse 'i'
     {
         _putchar(password[i]);
     }
