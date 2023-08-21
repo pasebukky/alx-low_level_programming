@@ -20,9 +20,9 @@ int _atoi(char *s)
             result = result * 10 + (*s - '0');
         else if (result != 0)
             break; /* End loop if non-digit after digits */
-        
+
         s++;
     }
 
-    return result * sign;
+    return (result * sign);
 }
