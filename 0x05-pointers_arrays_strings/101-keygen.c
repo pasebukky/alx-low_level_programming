@@ -1,37 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
-#define LENTH_OF_PASSWORD 10
+#define LENGTH_OF_PASSWORD 15
 
-/**
- * main - Generates random password and prints it using putchar.
- *
- * Return: Always 0.
- */
-int _putchar(char c);
-int main(void)
-{
+int main(void) {
     int i;
-    
-    char password[LENTH_OF_PASSWORD + 1];
+
+    char password[LENGTH_OF_PASSWORD + 1];
     const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
     srand(time(0));
 
-    for (i = 0; i < LENTH_OF_PASSWORD; i++)
-    {
+    // Generate a random password
+    for (i = 0; i < LENGTH_OF_PASSWORD; i++) {
         int random_index = rand() % (sizeof(charset) - 1);
         password[i] = charset[random_index];
     }
 
-    password[LENTH_OF_PASSWORD] = '\0';
+    password[LENGTH_OF_PASSWORD] = '\0';
 
-    for (i = 0; i < LENTH_OF_PASSWORD; i++)
-    {
-        _putchar(password[i]);
+    // Check if the generated password matches the correct password
+    const char correct_password[] = "Tada! Congrats";
+    if (strcmp(password, correct_password) == 0) {
+        printf("Generated Password: %s\n", password);
+        printf("Correct password! Tada! Congrats\n");
+    } else {
+        printf("Generated Password: %s\n", password);
+        printf("Wrong password\n");
     }
-    _putchar('\n');
 
     return 0;
 }
