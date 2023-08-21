@@ -15,9 +15,11 @@ while (s[finish] != '\0')
 finish--;
 
 while (begin < finish)
-        temp = s[begin];
+{
+       	temp = s[begin];
         s[begin] = s[finish];
         s[finish] = temp;
 	begin++;
 	finish--;
+}
 }
