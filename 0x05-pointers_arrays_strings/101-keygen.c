@@ -23,10 +23,11 @@ int _putchar(char c)
 int main(void)
 {
     int i;
-    srand(time(0));
-
+    
     char password[LENTH_OF_PASSWORD + 1];
     const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    srand(time(0));
 
     for (i = 0; i < LENTH_OF_PASSWORD; i++)
     {
