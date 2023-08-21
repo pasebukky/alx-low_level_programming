@@ -15,7 +15,9 @@ while (str[length] != '\0')
 start = str + (length + 1) / 2;
 
 while (*start != '\0')
+{
 	_putchar(*start);
         start++;
+}
 _putchar('\n');
 }
