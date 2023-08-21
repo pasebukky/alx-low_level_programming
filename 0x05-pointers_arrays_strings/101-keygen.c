@@ -22,7 +22,7 @@ int _putchar(char c)
  */
 int main(void)
 {
-    int i = 0;
+    int i;
     srand(time(0));
 
     char password[LENTH_OF_PASSWORD + 1];
