@@ -9,22 +9,20 @@
  *
  * Return: Destination string pointer.
  */
- 
+
 char *_strncpy(char *dest, char *src, int n)
 {
-    char *a = dest;
+char *a = dest;
 
-    while (n > 0 && *src)
-    {
-        *a++ = *src++;
-        n--;
-    }
-    
-    while (n > 0)
-    {
-        *a++ = '\0';
-        n--;
-    }
-
-    return dest;
+while (n > 0 && *src)
+{
+	*a++ = *src++;
+	n--;
+}    
+while (n > 0)
+{
+	*a++ = '\0';
+	n--;
+}
+return (dest);
 }
