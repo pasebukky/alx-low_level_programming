@@ -9,24 +9,21 @@
  *
  * Return: Destination string pointer.
  */
- 
+
 char *_strncat(char *dest, char *src, int n)
 {
-    char *a = dest;
-    
-    while (*a)
-    {
-        a++;
-    }
-    
-    while (n > 0 && *src)
-    {
-        *a++ = *src++;
-        n--;
-    }
+char *a = dest;
 
-    *a = '\0';
-
-    return dest;
+while (*a)
+{
+	a++;
 }
-
+    
+while (n > 0 && *src)
+{
+	*a++ = *src++;
+	n--;
+}
+*a = '\0';
+return (dest);
+}
