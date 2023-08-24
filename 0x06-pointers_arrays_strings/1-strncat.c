@@ -18,7 +18,6 @@ while (*a)
 {
 	a++;
 }
-    
 while (n > 0 && *src)
 {
 	*a++ = *src++;
