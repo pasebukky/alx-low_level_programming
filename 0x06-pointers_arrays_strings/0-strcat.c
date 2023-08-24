@@ -8,19 +8,17 @@
  *
  * Return: Destination string.
  */
- 
+
 char *_strcat(char *dest, const char *src)
 {
-    char *a = dest + strlen(dest);
+char *a = dest + strlen(dest);
 
-    while (*src != '\0')
-    {
-        *a = *src;
-        a++;
-        src++;
-    }
-
-    *a = '\0';
-
-    return dest;
+while (*src != '\0')
+{
+	*a = *src;
+	a++;
+	src++;
+}
+*a = '\0';
+return (dest);
 }
