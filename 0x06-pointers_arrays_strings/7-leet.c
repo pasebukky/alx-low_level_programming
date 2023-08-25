@@ -7,23 +7,22 @@
  *
  * Return: Modified string pointer
  */
- 
+
 char *leet(char *str)
 {
-    char *a = str;
-    char leetLegend[] = "4433007711";
-    char leetIcons[] = "aAeEoOtTlL";
-    int b;
+char *a = str;
+char leetLegend[] = "4433007711";
+char leetIcons[] = "aAeEoOtTlL";
+int b;
 
-    for (; *a != '\0'; a++)
-    {
-        char *charFound = strchr(leetIcons, *a);
-        if (charFound != NULL)
-        {
-            b = charFound - leetIcons;
-            *a = leetLegend[b];
-        }
-    }
-
-    return str;
+for (; *a != '\0'; a++)
+{
+	char *charFound = strchr(leetIcons, *a);
+	if (charFound != NULL)
+	{
+		b = charFound - leetIcons;
+		*a = leetLegend[b];
+	}
+}
+return (str);
 }
