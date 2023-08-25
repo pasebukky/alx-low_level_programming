@@ -13,39 +13,37 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-    int length_n1 = 0, length_n2 = 0;
-    int cv = 0, sum, idx_r = 0;
+int length_n1 = 0, length_n2 = 0;
+int cv = 0, sum, idx_r = 0;
 
-    while (n1[length_n1] != '\0')
-        length_n1++;
-    while (n2[length_n2] != '\0')
-        length_n2++;
+while (n1[length_n1] != '\0')
+	length_n1++;
+while (n2[length_n2] != '\0')
+	length_n2++;
 
-    if (length_n1 >= size_r || length_n2 >= size_r)
-        return (0);
+if (length_n1 >= size_r || length_n2 >= size_r)
+return (0);
 
-    r[size_r - 1] = '\0';
-    length_n1--;
-    length_n2--;
+r[size_r - 1] = '\0';
+length_n1--;
+length_n2--;
 
-    while (length_n1 >= 0 || length_n2 >= 0 || cv)
-    {
-        sum = cv;
-        if (length_n1 >= 0)
-            sum += n1[length_n1] - '0';
-        if (length_n2 >= 0)
-            sum += n2[length_n2] - '0';
-        
-        r[size_r - idx_r - 2] = (sum % 10) + '0';
-        cv = sum / 10;
+while (length_n1 >= 0 || length_n2 >= 0 || cv)
+{
+	sum = cv;
+	if (length_n1 >= 0)
+		sum += n1[length_n1] - '0';
+	if (length_n2 >= 0)
+		sum += n2[length_n2] - '0';
 
-        if (length_n1 >= 0)
-            length_n1--;
-        if (length_n2 >= 0)
-            length_n2--;
-        idx_r++;
-    }
+	r[size_r - idx_r - 2] = (sum % 10) + '0';
+	cv = sum / 10;
 
-    return (r + size_r - idx_r - 1);
+	if (length_n1 >= 0)
+		length_n1--;
+	if (length_n2 >= 0)
+		length_n2--;
+	idx_r++;
 }
-
+return (r + size_r - idx_r - 1);
+}
