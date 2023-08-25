@@ -8,17 +8,17 @@
  *
  * Return: Modified string pointer.
  */
- 
+
 char *string_toupper(char *str)
 {
-    int b;
-    for (b = 0; str[b] != '\0'; b++)
-    {
-        if (str[b] >= 'a' && str[b] <= 'z')
-        {
-            str[b] = str[b] - ('a' - 'A');
-        }
-    }
+int b;
 
-    return str;
+for (b = 0; str[b] != '\0'; b++)
+{
+	if (str[b] >= 'a' && str[b] <= 'z')
+	{
+		str[b] = str[b] - ('a' - 'A');
+	}
+}
+return (str);
 }
