@@ -1,34 +1,29 @@
-#include "main.h"
-
-/**
  * print_buffer - Prints buffer contents.
- * @b: Buffer pointer.
- * @size: Buffer size.
+ * @b: Buffer pointer
+ * @size: Buffer size
  */
- 
 void print_buffer(char *b, int size)
 {
     int p, q;
 
-    if (size <= 0)
+    for (p = 0; p < size; p += 10)
     {
-        _putchar('\n');
-        return;
-    }
+        char hd;
 
-    for (p = 0; p < size; p += 16)
-    {
-        _printf("%08x: ", p);
-
-        for (q = 0; q < 16; q++)
+        for (q = 0; q < 10; q++)
         {
             if (p + q < size)
             {
-                _printf("%02x", (unsigned char)b[p + q]);
+                hd = (b[p + q] >> 4) & 0xF;
+                _putchar(hd < 10 ? hd + '0' : hd - 10 + 'a');
+
+                hd = b[p + q] & 0xF;
+                _putchar(hd < 10 ? hd + '0' : hd - 10 + 'a');
             }
             else
             {
-                _printf("  ");
+                _putchar(' ');
+                _putchar(' ');
             }
 
             if (q % 2 != 0)
@@ -38,8 +33,7 @@ void print_buffer(char *b, int size)
         }
 
         _putchar(' ');
-
-        for (q = 0; q < 16; q++)
+        for (q = 0; q < 10; q++)
         {
             if (p + q < size)
             {
@@ -54,7 +48,7 @@ void print_buffer(char *b, int size)
             }
             else
             {
-                break;
+                _putchar(' ');
             }
         }
 
