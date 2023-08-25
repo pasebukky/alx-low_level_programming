@@ -13,7 +13,9 @@
 int _strcmp(char *s1, char *s2)
 {
 for (; *s1 != '\0' && *s1 == *s2; s1++, s2++)
+{
 	/* Continues the loop until the strings are different
-	 * or until the end of the strings */
+	* or until the end of the strings */
+}
 return (*s1 - *s2);
 }
