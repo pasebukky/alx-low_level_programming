@@ -1,3 +1,6 @@
+#include "main.h"
+
+/**
  * print_buffer - Prints buffer contents.
  * @b: Buffer pointer
  * @size: Buffer size
