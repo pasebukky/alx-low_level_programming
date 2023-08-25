@@ -2,31 +2,33 @@
 
 /**
  * print_buffer - Prints buffer contents.
- * @b: Buffer pointer
- * @size: Buffer size
+ * @b: Buffer pointer.
+ * @size: Buffer size.
  */
+ 
 void print_buffer(char *b, int size)
 {
     int p, q;
 
-    for (p = 0; p < size; p += 10)
+    if (size <= 0)
     {
-        char hd;
+        _putchar('\n');
+        return;
+    }
 
-        for (q = 0; q < 10; q++)
+    for (p = 0; p < size; p += 16)
+    {
+        _printf("%08x: ", p);
+
+        for (q = 0; q < 16; q++)
         {
             if (p + q < size)
             {
-                hd = (b[p + q] >> 4) & 0xF;
-                _putchar(hd < 10 ? hd + '0' : hd - 10 + 'a');
-
-                hd = b[p + q] & 0xF;
-                _putchar(hd < 10 ? hd + '0' : hd - 10 + 'a');
+                _printf("%02x", (unsigned char)b[p + q]);
             }
             else
             {
-                _putchar(' ');
-                _putchar(' ');
+                _printf("  ");
             }
 
             if (q % 2 != 0)
@@ -36,7 +38,8 @@ void print_buffer(char *b, int size)
         }
 
         _putchar(' ');
-        for (q = 0; q < 10; q++)
+
+        for (q = 0; q < 16; q++)
         {
             if (p + q < size)
             {
@@ -51,11 +54,10 @@ void print_buffer(char *b, int size)
             }
             else
             {
-                _putchar(' ');
+                break;
             }
         }
 
         _putchar('\n');
     }
 }
-
