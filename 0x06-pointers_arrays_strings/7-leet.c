@@ -13,11 +13,11 @@ char *leet(char *str)
 char *a = str;
 char leetLegend[] = "4433007711";
 char leetIcons[] = "aAeEoOtTlL";
+char *charFound = strchr(leetIcons, *a);
 int b;
 
 for (; *a != '\0'; a++)
 {
-	char *charFound = strchr(leetIcons, *a);
 	if (charFound != NULL)
 	{
 		b = charFound - leetIcons;
