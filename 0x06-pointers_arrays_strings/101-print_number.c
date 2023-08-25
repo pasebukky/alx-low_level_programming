@@ -21,8 +21,7 @@ else if (n < 0)
 int p = 1;
 
 while (n / p >= 10)
-p *= 10;
-
+	p *= 10;
 while (p != 0)
 {
 	_putchar((n / p) + '0');
