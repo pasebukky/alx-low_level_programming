@@ -17,12 +17,13 @@ int b;
 
 for (; *a != '\0'; a++)
 {
-        char *charFound = strchr(leetIcons, *a);
-        if (charFound != NULL)
-        {
-                b = charFound - leetIcons;
-                *a = leetLegend[b];
-        }
+	char *charFound = strchr(leetIcons, *a);
+
+	if (charFound != NULL)
+	{
+		b = charFound - leetIcons;
+		*a = leetLegend[b];
+	}
 }
 return (str);
 }
