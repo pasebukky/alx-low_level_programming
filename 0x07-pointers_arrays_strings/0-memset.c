@@ -24,8 +24,7 @@ if (n > 0)
 		*s = b;
 		s++;
 		n--;
-	}
-	while (n > 0);
+	}while (n > 0);
 }
 return (start);
 }
