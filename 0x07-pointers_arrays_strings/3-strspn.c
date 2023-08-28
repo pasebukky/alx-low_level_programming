@@ -32,7 +32,7 @@ while (*s)
 	{
 		break;
 	}
-	s++
+	s++;
 }
 return (count);
 }
