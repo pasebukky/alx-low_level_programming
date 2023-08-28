@@ -6,7 +6,7 @@
  * @a: Pointer to the matrix of integers.
  * @size: Size of the square matrix.
  */
- 
+
 void print_diagsums(int *a, int size)
 {
     int sum_diag1 = 0;
@@ -23,11 +23,19 @@ void print_diagsums(int *a, int size)
 
     temp_index = 0;
 
-    while (sum_diag1 > 0)
+    if (sum_diag1 == 0)
     {
-        temp[temp_index++] = (sum_diag1 % 10) + '0';
-        sum_diag1 /= 10;
+        temp[temp_index++] = '0';
     }
+    else
+    {
+        while (sum_diag1 > 0)
+        {
+            temp[temp_index++] = (sum_diag1 % 10) + '0';
+            sum_diag1 /= 10;
+        }
+    }
+
     for (b = temp_index - 1; b >= 0; b--)
     {
         _putchar(temp[b]);
@@ -35,14 +43,24 @@ void print_diagsums(int *a, int size)
     _putchar(',');
 
     temp_index = 0;
-    while (sum_diag2 > 0)
+
+    if (sum_diag2 == 0)
     {
-        temp[temp_index++] = (sum_diag2 % 10) + '0';
-        sum_diag2 /= 10;
+        temp[temp_index++] = '0';
     }
+    else
+    {
+        while (sum_diag2 > 0)
+        {
+            temp[temp_index++] = (sum_diag2 % 10) + '0';
+            sum_diag2 /= 10;
+        }
+    }
+
     for (b = temp_index - 1; b >= 0; b--)
     {
         _putchar(temp[b]);
     }
     _putchar('\n');
 }
+
