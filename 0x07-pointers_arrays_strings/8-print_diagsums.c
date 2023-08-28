@@ -30,9 +30,9 @@ void print_diagsums(int *a, int size)
     }
     for (b = temp_index - 1; b >= 0; b--)
     {
-        _putchar(temp[b]);
+        putchar(temp[b]);
     }
-    _putchar(' ');
+    putchar(' ');
 
     temp_index = 0;
     while (sum_diag2 > 0)
@@ -42,7 +42,7 @@ void print_diagsums(int *a, int size)
     }
     for (b = temp_index - 1; b >= 0; b--)
     {
-        _putchar(temp[b]);
+        putchar(temp[b]);
     }
-    _putchar('\n');
+    putchar('\n');
 }
