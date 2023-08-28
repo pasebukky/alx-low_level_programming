@@ -8,7 +8,7 @@
  * @b: constant byte to be filled in memory
  * @n: number of bytes to be filled
  *
- * Return: Pointer to s
+ * Return: Pointer to @s
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -24,7 +24,8 @@ if (n > 0)
 		*s = b;
 		s++;
 		n--;
-	}while (n > 0);
+	}
+	while (n > 0);
 }
 return (start);
 }
