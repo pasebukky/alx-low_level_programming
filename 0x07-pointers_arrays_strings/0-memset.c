@@ -13,10 +13,12 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-char *start = s;
+char *start;
 
 if (n > 0)
 {
+	start = s;
+
 	do
 	{
 		*s = b;
