@@ -2,10 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - prints the sum of the two
- * diagonals of a square matrix
- * @a: matrix of integers pointer
- * @size: square matrix size
+ * print_diagsums - Prints the sum of the two diagonals of a square matrix.
+ * @a: Pointer to the matrix of integers.
+ * @size: Size of the square matrix.
  */
  
 void print_diagsums(int *a, int size)
@@ -23,6 +22,7 @@ void print_diagsums(int *a, int size)
     }
 
     temp_index = 0;
+
     while (sum_diag1 > 0)
     {
         temp[temp_index++] = (sum_diag1 % 10) + '0';
@@ -30,9 +30,9 @@ void print_diagsums(int *a, int size)
     }
     for (b = temp_index - 1; b >= 0; b--)
     {
-        putchar(temp[b]);
+        _putchar(temp[b]);
     }
-    putchar(' ');
+    _putchar(',');
 
     temp_index = 0;
     while (sum_diag2 > 0)
@@ -42,7 +42,7 @@ void print_diagsums(int *a, int size)
     }
     for (b = temp_index - 1; b >= 0; b--)
     {
-        putchar(temp[b]);
+        _putchar(temp[b]);
     }
-    putchar('\n');
+    _putchar('\n');
 }
