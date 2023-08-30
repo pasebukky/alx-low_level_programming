@@ -12,7 +12,7 @@
 int is_palindrome(char *s)
 {
 int len = strlen(s);
-return confirm_palindrome(s, 0, len - 1);
+return (confirm_palindrome(s, 0, len - 1));
 }
 
 /**
@@ -27,9 +27,9 @@ return confirm_palindrome(s, 0, len - 1);
 int confirm_palindrome(char *s, int start, int finish)
 {
 if (start >= finish)
-	return 1;
+	return (1);
 else if (s[start] != s[finish])
-	return 0;
+	return (0);
 else
-	return confirm_palindrome(s, start + 1, finish - 1);
+	return (confirm_palindrome(s, start + 1, finish - 1));
 }

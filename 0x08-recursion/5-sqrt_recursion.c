@@ -12,9 +12,9 @@
 int _sqrt_recursion(int n)
 {
 if (n < 0)
-	return -1;
+	return (-1);
 else
-	return find_sqrt(n, 1);
+	return (find_sqrt(n, 1));
 }
 
 /**
@@ -29,9 +29,9 @@ else
 int find_sqrt(int n, int m)
 {
 if (m * m > n)
-	return -1;
+	return (-1);
 else if (m * m == n)
-	return m;
+	return (m);
 else
-	return find_sqrt(n, m + 1);
+	return (find_sqrt(n, m + 1));
 }
