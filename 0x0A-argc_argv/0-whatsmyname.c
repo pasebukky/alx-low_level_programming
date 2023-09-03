@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 if (argc > 0)
 {
 	char *prog_name = argv[0];
+
 	while (*prog_name != '\0')
 	{
 		_putchar(*prog_name);

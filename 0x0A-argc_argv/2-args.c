@@ -16,6 +16,7 @@ int i;
 for (i = 0; i < argc; i++)
 {
 	char *arg = argv[i];
+
 	while (*arg != '\0')
 	{
 		_putchar(*arg);
