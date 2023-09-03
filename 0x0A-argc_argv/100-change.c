@@ -12,9 +12,8 @@
 int calc_min_coins(int cents)
 {
 int coin[] = {25, 10, 5, 2, 1};
-int count_coins;
-int i;
-    
+int count_coins, i;
+
 count_coins = 0;
 
 for (i = 0; i < 5; i++)
@@ -42,7 +41,7 @@ int cents;
 int count_coins;
 int divider;
 
-if (argc != 2) 
+if (argc != 2)
 {
 	_putchar('E');
 	_putchar('r');
@@ -70,8 +69,7 @@ while (count_coins / divider >= 10)
 {
 	divider *= 10;
 }
-
-while (divider > 0) 
+while (divider > 0)
 {
 	_putchar('0' + count_coins / divider);
 	count_coins %= divider;

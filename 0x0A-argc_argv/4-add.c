@@ -7,7 +7,7 @@
  * @c: Character to be confirmed.
  *
  * Return: 1 if it is a digit, 0 otherwise.
- */
+*/
 
 int confirm_digit(char c)
 {
@@ -24,9 +24,7 @@ int confirm_digit(char c)
 
 int main(int argc, char *argv[])
 {
-int sum;
-int i, j;
-int divider;
+int sum, i, j, divider;
 
 if (argc == 1)
 {
@@ -34,40 +32,27 @@ if (argc == 1)
 	_putchar('\n');
 	return (0);
 }
-
 sum = 0;
 
 for (i = 1; i < argc; i++)
 {
 	for (j = 0; argv[i][j]; j++)
-	{
 		if (!confirm_digit(argv[i][j]))
 		{
-			_putchar('E');
-			_putchar('r');
-			_putchar('r');
-			_putchar('o');
-			_putchar('r');
-			_putchar('\n');
+			printf("Error\n");
 			return (1);
 		}
-	}
 	sum += atoi(argv[i]);
 }
-
 if (sum < 0)
 {
 	_putchar('-');
 	sum = -sum;
 }
-
 divider = 1;
 
 while (sum / divider >= 10)
-{
 	divider *= 10;
-}
-
 while (divider > 0)
 {
 	_putchar('0' + sum / divider);
