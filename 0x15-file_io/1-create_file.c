@@ -15,7 +15,10 @@ int file;
 int length;
 int text_written;
 
-length = strlen(text_content);
+if (text_content != NULL)
+	length = strlen(text_content);
+else
+	length = 0;
 
 if (filename == NULL)
 	return (-1);
