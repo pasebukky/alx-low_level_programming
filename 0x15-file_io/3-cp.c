@@ -48,14 +48,14 @@ file_from_fd = open_file(file_from, O_RDONLY, 0);
 file_to_fd = open_file(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR |
 S_IWUSR | S_IRGRP | S_IROTH);
 
-content = malloc(BUFSIZ);
+content = malloc(BUFFER_SIZE);
 
 if (content == NULL)
 {
 	error_exit("Error: Memory allocation failed", 100);
 }
 
-while ((text_read = read(file_from_fd, content, BUFSIZ)) > 0)
+while ((text_read = read(file_from_fd, content, BUFFER_SIZE)) > 0)
 {
 	text_written = write(file_to_fd, content, text_read);
 	if (text_written != text_read)
@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 {
 if (argc != 3)
 {
-	error_exit("Usage: cp file_from file_to", 97);
+	error_exit("Usage: cp file_from file_to\n", 97);
 }
 
 copy_file(argv[1], argv[2]);
