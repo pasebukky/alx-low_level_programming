@@ -20,7 +20,7 @@ ssize_t content_written;
 if (filename == NULL)
 	return (0);
 
-file = open (filename, O_RDONLY);
+file = open(filename, O_RDONLY);
 
 if (file == -1)
 	return (0);
@@ -42,5 +42,5 @@ close(file);
 if (content_written == -1 || content_written != content_read)
 	return (0);
 
-return(content_read);
+return (content_read);
 }
