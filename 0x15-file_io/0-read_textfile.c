@@ -12,43 +12,35 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-FILE *ptr;
+int file;
 char *content;
-size_t printed_char;
-ssize_t char_read;
-ssize_t written_char;
-
-ptr = fopen("Requiescat", "r");
-content = malloc(letters);
-printed_char = 0;
+ssize_t content_read;
+ssize_t content_written;
 
 if (filename == NULL)
 	return (0);
 
-if (ptr == NULL)
+file = open (filename, O_RDONLY);
+
+if (file == -1)
 	return (0);
 
-if (content == NULL)
+content = malloc(letters * sizeof(char));
+
+content_read = read(file, content, letters);
+
+if (content_read == -1)
 {
-	fclose(ptr);
+	close(file);
 	return (0);
 }
 
-while (printed_char < letters &&
-(char_read = fread(content, 1, letters, ptr)) > 0)
-{
-	written_char = fwrite(content, 1, char_read, stdout);
-	if (written_char == -1 || written_char != char_read)
-	{
-		fclose(ptr);
-		free(content);
-		return (0);
-	}
-	printed_char += char_read;
-}
+content_written = write(STDOUT_FILENO, content, content_read);
 
-fclose(ptr);
-free(content);
+close(file);
 
-return (printed_char);
+if (content_written == -1 || content_written != content_read)
+	return (0);
+
+return(content_read);
 }
