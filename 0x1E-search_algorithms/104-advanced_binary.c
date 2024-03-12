@@ -1,30 +1,6 @@
 #include "search_algos.h"
 
 /**
- * print_array - prints an array or subarray during a binary search
- *
- * @array: pointer to the first element of the array
- * @start: starting index of the array or subarray
- * @end: ending index of the array or subarray
- */
-
-void print_array(int *array, size_t start, size_t end)
-{
-	size_t i;
-
-	printf("Searching in array: ");
-	for (i = start; i <= end; i++)
-	{
-		printf("%d", array[i]);
-		if (i < end)
-			printf(", ");
-		else
-			printf("\n");
-	}
-}
-
-
-/**
  * advanced_binary_recursive - searches for a value in a sorted array
  * of integers using the Advanced Binary search algorithm (with recursion)
  *
@@ -38,26 +14,22 @@ void print_array(int *array, size_t start, size_t end)
 
 int advanced_binary_recursive(int *array, size_t start, size_t end, int value)
 {
-	size_t mid;
+	size_t i;
 
-	if (start <= end)
-	{
-		mid = (start + end) / 2;
+	if (end < start)
+		return (-1);
 
-		print_array(array, start, end);
+	printf("Searching in array: ");
+	for (i = start; i < end; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
 
-	if (array[mid] == value)
-	{
-		if (mid > 0 && array[mid - 1] == value)
-			return (advanced_binary_recursive(array, start, mid, value));
-		return ((int)mid);
-	}
-	else if (array[mid] < value)
-		return (advanced_binary_recursive(array, mid + 1, end, value));
-	else
-		return (advanced_binary_recursive(array, start, mid - 1, value));
-	}
-	return (-1);
+	i = start + (end - start) / 2;
+	if (array[i] == value && (i == start || array[i - 1] != value))
+		return (i);
+	if (array[i] >= value)
+		return (advanced_binary_recursive(array, start, i, value));
+	return (advanced_binary_recursive(array, i + 1, end, value));
 }
 
 /**
@@ -74,7 +46,7 @@ int advanced_binary_recursive(int *array, size_t start, size_t end, int value)
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 	return (advanced_binary_recursive(array, 0, size - 1, value));
 }
